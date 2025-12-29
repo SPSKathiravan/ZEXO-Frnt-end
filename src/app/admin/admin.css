@@ -1,0 +1,10 @@
+/* Custom grid patterns for admin panel */
+.bg-grid-slate-900\/\[0\.04\] {
+  background-image: linear-gradient(to right, rgb(15 23 42 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(15 23 42 / 0.04) 1px, transparent 1px);
+}
+
+.bg-grid-white\/\[0\.05\] {
+  background-image: linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+}
