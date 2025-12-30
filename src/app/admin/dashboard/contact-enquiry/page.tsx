@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 interface ContactEnquiry {
-  id: number;
+  id: string;
   name: string;
   email: string;
   phone: string;
@@ -13,65 +14,45 @@ interface ContactEnquiry {
   status: 'new' | 'read' | 'replied';
 }
 
-// Demo data
-const demoEnquiries: ContactEnquiry[] = [
-  {
-    id: 1,
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    phone: '+1 234 567 8900',
-    subject: 'Website Development Inquiry',
-    message: 'Hi, I am interested in developing a new website for my business. Could you please provide more information about your services and pricing?',
-    date: '2025-12-28T10:30:00',
-    status: 'new',
-  },
-  {
-    id: 2,
-    name: 'Sarah Johnson',
-    email: 'sarah.j@company.com',
-    phone: '+1 234 567 8901',
-    subject: 'Mobile App Development',
-    message: 'We need a mobile application for both iOS and Android. Can we schedule a call to discuss the requirements?',
-    date: '2025-12-27T14:20:00',
-    status: 'read',
-  },
-  {
-    id: 3,
-    name: 'Michael Brown',
-    email: 'michael.b@startup.io',
-    phone: '+1 234 567 8902',
-    subject: 'Partnership Opportunity',
-    message: 'I would like to explore potential partnership opportunities. Looking forward to your response.',
-    date: '2025-12-26T09:15:00',
-    status: 'replied',
-  },
-  {
-    id: 4,
-    name: 'Emily Davis',
-    email: 'emily.davis@email.com',
-    phone: '+1 234 567 8903',
-    subject: 'UI/UX Design Services',
-    message: 'Can you help us redesign our existing platform? We are looking for modern UI/UX improvements.',
-    date: '2025-12-25T16:45:00',
-    status: 'new',
-  },
-  {
-    id: 5,
-    name: 'David Wilson',
-    email: 'david.wilson@tech.com',
-    phone: '+1 234 567 8904',
-    subject: 'Technical Support',
-    message: 'We are facing some technical issues with our current website. Can you provide support?',
-    date: '2025-12-24T11:00:00',
-    status: 'read',
-  },
-];
-
 export default function ContactEnquiryPage() {
-  const [enquiries, setEnquiries] = useState<ContactEnquiry[]>(demoEnquiries);
+  const [enquiries, setEnquiries] = useState<ContactEnquiry[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [selectedEnquiry, setSelectedEnquiry] = useState<ContactEnquiry | null>(null);
   const [filter, setFilter] = useState<'all' | 'new' | 'read' | 'replied'>('all');
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    const fetchEnquiries = async () => {
+      const token = Cookies.get('admin_token');
+      if (!token) {
+        setError('Not authenticated');
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/admin/contacts', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setEnquiries(data);
+        } else {
+          setError('Failed to fetch enquiries');
+        }
+      } catch (err) {
+        setError('Failed to fetch enquiries');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEnquiries();
+  }, []);
 
   const filteredEnquiries = enquiries.filter((enquiry) => {
     const matchesFilter = filter === 'all' || enquiry.status === filter;
@@ -89,7 +70,7 @@ export default function ContactEnquiryPage() {
     replied: enquiries.filter((e) => e.status === 'replied').length,
   };
 
-  const updateStatus = (id: number, status: 'new' | 'read' | 'replied') => {
+  const updateStatus = (id: string, status: 'new' | 'read' | 'replied') => {
     setEnquiries(
       enquiries.map((e) => (e.id === id ? { ...e, status } : e))
     );
@@ -110,6 +91,28 @@ export default function ContactEnquiryPage() {
         return 'bg-gray-100 text-gray-800';
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-96">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="text-slate-600 mt-4">Loading enquiries...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-96">
+        <div className="text-center">
+          <div className="text-red-600 text-lg font-semibold">Error</div>
+          <p className="text-slate-600 mt-2">{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
