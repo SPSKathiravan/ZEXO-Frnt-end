@@ -129,15 +129,6 @@ export default function Aboutus() {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16 pt-12 border-t border-gray-300 dark:border-white/10 transition-colors duration-300">
-          <p className="text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
-            Ready to transform your digital presence?
-          </p>
-          <button className="inline-flex items-center justify-center px-8 py-3 bg-linear-to-r from-[#08b48d] to-[#00d4aa] text-gray-900 dark:text-black font-semibold rounded-lg hover:shadow-2xl hover:shadow-[#08b48d]/50 transform hover:scale-105 transition-all duration-300">
-            Start Your Project
-          </button>
-        </div>
       </div>
     </section>
   );

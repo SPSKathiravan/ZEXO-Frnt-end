@@ -5,7 +5,6 @@ import HeroSection from "./Components/Herosection";
 import Aboutus from "./Components/Aboutus";
 import Featuredworks from "./Components/Featuredworks";
 import Services from "./Components/Services";
-import Services2 from "./Components/Services2";
 import Footer from './Components/Footer';
 
 
@@ -18,7 +17,7 @@ export default function Home() {
       <Aboutus />
       <Services />
       <Featuredworks />
-      <Services2 />
+
       <Footer />
     </>
   );

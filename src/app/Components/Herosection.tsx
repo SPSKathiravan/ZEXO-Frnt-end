@@ -10,6 +10,13 @@ import {
 import { FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 
+// Import images
+import heroImage from "../../../public/3.jpg";
+import codingImage from "../../../public/1.jpg";
+import aiImage from "../../../public/2.jpg";
+import analyticsImage from "../../../public/4.jpg";
+import devImage from "../../../public/5.jpg";
+
 interface ParallaxImgProps {
   className: string;
   alt: string;
@@ -80,7 +87,7 @@ const CenterImage = () => {
         backgroundSize,
         opacity,
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          `url(${heroImage.src})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -92,28 +99,28 @@ const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={codingImage.src}
         alt="Coding and programming"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={aiImage.src}
         alt="Artificial Intelligence and machine learning"
         start={200}
         end={-250}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={analyticsImage.src}
         alt="Data visualization and analytics"
         start={-200}
         end={200}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src={devImage.src}
         alt="Software development and coding"
         start={0}
         end={-500}

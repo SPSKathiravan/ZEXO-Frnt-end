@@ -23,25 +23,25 @@ const TextParallaxContentExample = () => {
   return (
     <div className="bg-white dark:bg-black transition-colors duration-300">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Our Services"
-        heading="Creative Solutions."
+        imgUrl="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Zexo Agency"
+        heading="Website Development"
       >
-        <ExampleContent />
+        <WebDevelopmentContent />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Our Services"
-        heading="Creative Solutions."
+        imgUrl="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Zexo Agency"
+        heading="SEO Optimization"
       >
-        <ExampleContent />
+        <SEOOptimizationContent />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Our Services"
-        heading="Creative Solutions."
+        imgUrl="https://images.unsplash.com/photo-1611532736579-6b16e2b50449?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Zexo Agency"
+        heading="Social Media Management"
       >
-        <ExampleContent />
+        <SocialMediaContent />
       </TextParallaxContent>
     </div>
   );
@@ -128,25 +128,50 @@ const OverlayCopy = ({ subheading, heading }: OverlayCopyProps) => {
   );
 };
 
-const ExampleContent = () => (
+const WebDevelopmentContent = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 bg-gray-50 dark:bg-black transition-colors duration-300">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-gray-900 dark:text-white">
-      Additional content explaining the above card here
+      Professional Web Solutions
     </h2>
     <div className="col-span-1 md:col-span-8">
       <p className="mb-4 text-xl text-gray-600 dark:text-gray-300 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
+        We create stunning, responsive websites that are built to convert. Our development team uses the latest technologies and best practices to deliver fast-loading, secure, and user-friendly websites that represent your brand perfectly.
       </p>
       <p className="mb-8 text-xl text-gray-600 dark:text-gray-300 md:text-2xl transition-colors duration-300">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
+        From custom website design to full-scale web applications, we ensure every project is optimized for performance and user experience across all devices.
       </p>
-      <button className="w-full rounded bg-[#08b48d] px-9 py-4 text-xl text-gray-900 dark:text-white font-semibold transition-colors hover:bg-[#07a578] md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
-      </button>
+    </div>
+  </div>
+);
+
+const SEOOptimizationContent = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 bg-gray-50 dark:bg-black transition-colors duration-300">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-gray-900 dark:text-white">
+      SEO Excellence
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-gray-600 dark:text-gray-300 md:text-2xl">
+        Boost your online visibility with our comprehensive SEO strategies. We conduct in-depth keyword research, optimize your website structure, and implement proven tactics to help you rank higher on search engines and drive organic traffic to your business.
+      </p>
+      <p className="mb-8 text-xl text-gray-600 dark:text-gray-300 md:text-2xl transition-colors duration-300">
+        Our data-driven approach ensures sustainable results, increasing your website's authority and bringing qualified leads directly to your doorstep.
+      </p>
+    </div>
+  </div>
+);
+
+const SocialMediaContent = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 bg-gray-50 dark:bg-black transition-colors duration-300">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4 text-gray-900 dark:text-white">
+      Social Media Mastery
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-gray-600 dark:text-gray-300 md:text-2xl">
+        Engage your audience and grow your brand presence across all social media platforms. We create compelling content, manage your community, and develop strategic campaigns that turn followers into loyal customers.
+      </p>
+      <p className="mb-8 text-xl text-gray-600 dark:text-gray-300 md:text-2xl transition-colors duration-300">
+        From content creation to community management and analytics tracking, we handle every aspect of your social media presence to maximize engagement and ROI.
+      </p>
     </div>
   </div>
 );
