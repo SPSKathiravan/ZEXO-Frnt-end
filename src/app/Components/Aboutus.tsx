@@ -67,7 +67,7 @@ export default function Aboutus() {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-300 dark:border-[#08b48d]/30">
-                <p className="text-2xl font-bold text-[#08b48d]">5+</p>
+                <p className="text-2xl font-bold text-[#08b48d]">4+</p>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Years Experience</p>
               </div>
               <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-300 dark:border-[#08b48d]/30">
@@ -75,7 +75,7 @@ export default function Aboutus() {
                 <p className="text-sm text-gray-600 dark:text-gray-300">Projects Completed</p>
               </div>
               <div className="bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-gray-300 dark:border-[#08b48d]/30">
-                <p className="text-2xl font-bold text-[#08b48d]">40+</p>
+                <p className="text-2xl font-bold text-[#08b48d]">20+</p>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Happy Clients</p>
               </div>
             </div>

@@ -36,7 +36,7 @@ export default function DashboardLayout({
   useEffect(() => {
     const verifyAuth = async () => {
       const token = Cookies.get('admin_token');
-      
+
       if (!token) {
         router.push('/admin');
         return;
@@ -138,6 +138,15 @@ export default function DashboardLayout({
         </svg>
       ),
     },
+    {
+      name: 'Career Enquiries',
+      href: '/admin/dashboard/career-enquiries',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
   ];
 
   return (
@@ -211,9 +220,8 @@ export default function DashboardLayout({
       <div className="flex">
         {/* Sidebar */}
         <aside
-          className={`${
-            sidebarOpen ? 'w-64' : 'w-0'
-          } bg-slate-900 dark:bg-slate-950 border-r border-slate-800 min-h-[calc(100vh-73px)] transition-all duration-300 overflow-hidden`}
+          className={`${sidebarOpen ? 'w-64' : 'w-0'
+            } bg-slate-900 dark:bg-slate-950 border-r border-slate-800 min-h-[calc(100vh-73px)] transition-all duration-300 overflow-hidden`}
         >
           <nav className="p-4 space-y-2">
             {navItems.map((item) => {
@@ -222,11 +230,10 @@ export default function DashboardLayout({
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
-                    isActive
+                  className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${isActive
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/30'
                       : 'text-slate-300 hover:bg-slate-800 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {item.icon}
                   <span className="font-medium">{item.name}</span>

@@ -16,6 +16,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -92,20 +93,19 @@ export default function Navbar() {
     <header className="relative z-50 w-full">
       {/* Modern Minimalist Navbar */}
       <nav
-        className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-1000 ease-in-out ${
-          scrolled
+        className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-1000 ease-in-out ${scrolled
             ? 'top-3 w-[80vw] md:max-w-4xl rounded-2xl border border-slate-700/40 dark:border-slate-700/40 bg-white/80 dark:bg-black/60 backdrop-blur-2xl px-6 md:px-12 py-3'
             : 'top-0 w-full px-4 md:px-8 py-5 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800/50'
-        }`}
+          }`}
       >
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 group">
             {/* Add your logo image here - uncomment and update the import above */}
-            <Image 
-              src={logo} 
-              alt="Logo" 
-              width={40} 
+            <Image
+              src={logo}
+              alt="Logo"
+              width={40}
               height={40}
               className="transition-all duration-1000 ease-in-out group-hover:scale-110"
             />
@@ -136,9 +136,8 @@ export default function Navbar() {
                 >
                   {link.name}
                   <div
-                    className={`absolute inset-x-2 bottom-0 h-0.5 rounded-full transition-all duration-1000 ease-in-out ${
-                      active === link.name ? 'opacity-100 bg-teal-500 shadow-lg shadow-teal-500/50' : 'opacity-0 group-hover:opacity-100 bg-teal-400/60'
-                    }`}
+                    className={`absolute inset-x-2 bottom-0 h-0.5 rounded-full transition-all duration-1000 ease-in-out ${active === link.name ? 'opacity-100 bg-teal-500 shadow-lg shadow-teal-500/50' : 'opacity-0 group-hover:opacity-100 bg-teal-400/60'
+                      }`}
                   />
                 </Link>
               ))}
@@ -170,9 +169,8 @@ export default function Navbar() {
             >
               {/* Toggle circle */}
               <div
-                className={`absolute top-1 w-5 h-5 rounded-full transition-all duration-1000 ease-in-out flex items-center justify-center ${
-                  theme === 'dark' ? 'left-1 bg-slate-700' : 'right-1 bg-white'
-                }`}
+                className={`absolute top-1 w-5 h-5 rounded-full transition-all duration-1000 ease-in-out flex items-center justify-center ${theme === 'dark' ? 'left-1 bg-slate-700' : 'right-1 bg-white'
+                  }`}
               >
                 {theme === 'dark' ? (
                   <svg className="w-3 h-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
@@ -257,9 +255,8 @@ export default function Navbar() {
               >
                 {/* Toggle circle */}
                 <div
-                  className={`absolute top-1.5 w-5 h-5 rounded-full transition-all duration-1000 ease-in-out flex items-center justify-center ${
-                    theme === 'dark' ? 'left-1.5 bg-slate-700' : 'right-1.5 bg-white'
-                  }`}
+                  className={`absolute top-1.5 w-5 h-5 rounded-full transition-all duration-1000 ease-in-out flex items-center justify-center ${theme === 'dark' ? 'left-1.5 bg-slate-700' : 'right-1.5 bg-white'
+                    }`}
                 >
                   {theme === 'dark' ? (
                     <svg className="w-3 h-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
