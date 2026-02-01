@@ -11,7 +11,7 @@ const jobs: Job[] = [
     {
         title: 'Videographer',
         type: 'Full-time',
-        location: 'Bangalore, India',
+        location: 'Bangalore, India | Dammam, Saudi Arabia',
         status: 'hired',
         description: 'Plan, shoot, and produce high-quality videos for digital marketing campaigns.',
         longDescription: 'We are looking for a skilled Videographer to capture and produce engaging video content. You will collaborate with our creative team to bring our brand stories to life through visual storytelling.',
@@ -37,7 +37,7 @@ const jobs: Job[] = [
     {
         title: 'Video Editor',
         type: 'Full-time',
-        location: 'Bangalore, India',
+        location: 'Bangalore, India | Dammam, Saudi Arabia',
         description: 'Edit engaging short & long-form videos for social media, websites, and ads.',
         longDescription: 'We are looking for a creative Video Editor to produce compelling visual content that resonates with our audience. You will play a key role in our marketing and content teams.',
         responsibilities: [
@@ -55,7 +55,7 @@ const jobs: Job[] = [
     {
         title: 'Content Writer',
         type: 'Full-time',
-        location: 'Bangalore, India',
+        location: 'Bangalore, India | Dammam, Saudi Arabia',
         description: 'Create SEO-friendly content for websites, blogs, ad copies, and social media.',
         longDescription: 'We are seeking a talented Content Writer to craft clear and persuasive copy. You will be responsible for maintaining brand voice and driving engagement through words.',
         responsibilities: [
@@ -73,7 +73,7 @@ const jobs: Job[] = [
     {
         title: 'Software Engineer',
         type: 'Full-time',
-        location: 'Bangalore, India',
+        location: 'Bangalore, India | Dammam, Saudi Arabia',
         description: 'Design, develop, and maintain web applications and software solutions.',
         longDescription: 'Join our engineering team to build robust and scalable software solutions. You will work across the full stack to deliver high-quality products.',
         responsibilities: [

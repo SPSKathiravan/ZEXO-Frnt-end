@@ -34,6 +34,7 @@ export default function Navbar() {
     if (path === '/') return 'Home';
     if (path === '/services') return 'Services';
     if (path === '/about') return 'About';
+    if (path === '/careers') return 'Careers';
     if (path === '/contact') return 'Contact';
     return 'Home';
   };
@@ -94,8 +95,8 @@ export default function Navbar() {
       {/* Modern Minimalist Navbar */}
       <nav
         className={`fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-1000 ease-in-out ${scrolled
-            ? 'top-3 w-[80vw] md:max-w-4xl rounded-2xl border border-slate-700/40 dark:border-slate-700/40 bg-white/80 dark:bg-black/60 backdrop-blur-2xl px-6 md:px-12 py-3'
-            : 'top-0 w-full px-4 md:px-8 py-5 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800/50'
+          ? 'top-3 w-[80vw] md:max-w-4xl rounded-2xl border border-slate-700/40 dark:border-slate-700/40 bg-white/80 dark:bg-black/60 backdrop-blur-2xl px-6 md:px-12 py-3'
+          : 'top-0 w-full px-4 md:px-8 py-5 bg-white/90 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800/50'
           }`}
       >
         <div className="flex items-center justify-between">
