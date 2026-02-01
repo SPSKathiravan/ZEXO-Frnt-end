@@ -5,9 +5,9 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-producti
 
 // Admin credentials (in production, store in database)
 const ADMIN_CREDENTIALS = {
-  username: 'admin',
-  // Password: admin123 (hashed)
-  passwordHash: '$2a$10$8ZqB0yqKjN9K1FZqQ7YQ.OvTqXE/YqUxZhQJzZqY4VqKYqZqY4VqK'
+  username: 'Zexo Team',
+  // Password: Zexo@1234admin (hashed)
+  passwordHash: '$2b$10$B.oNomuKm6A.sDPBIc5b/OiN9CqJ30UL5LB5jbRNU.pJHbShzQ40u'
 };
 
 export interface AdminUser {
@@ -40,15 +40,15 @@ export async function authenticateAdmin(username: string, password: string): Pro
     return null;
   }
 
-  // For demo purposes, accept 'admin123' or verify against hash
-  const isValid = password === 'admin123' || await verifyPassword(password, ADMIN_CREDENTIALS.passwordHash);
-  
+  // Verify against hash
+  const isValid = await verifyPassword(password, ADMIN_CREDENTIALS.passwordHash);
+
   if (!isValid) {
     return null;
   }
 
   return {
     username: ADMIN_CREDENTIALS.username,
-    name: 'ZEXO'
+    name: 'Zexo Team'
   };
 }
