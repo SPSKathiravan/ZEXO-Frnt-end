@@ -25,16 +25,14 @@ const Footer: React.FC = () => {
               From web development to AI integration, we bring your vision to life.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300">
+              <a href="https://www.instagram.com/zexoagency?igsh=bm4yb2ZjYmNrenB6" className="text-gray-500 dark:text-gray-400 hover:text-blue-500 transition-colors duration-300">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300">
+
+              <a href="https://www.instagram.com/zexoagency?igsh=bm4yb2ZjYmNrenB6" className="text-gray-500 dark:text-gray-400 hover:text-pink-500 transition-colors duration-300">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-500 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/zexo-agency/" className="text-gray-500 dark:text-gray-400 hover:text-blue-500 transition-colors duration-300">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -59,11 +57,7 @@ const Footer: React.FC = () => {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link href="/projects" className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300">
-                  Projects
-                </Link>
-              </li>
+
               <li>
                 <Link href="/contact" className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300">
                   Contact
@@ -94,21 +88,38 @@ const Footer: React.FC = () => {
               <Mail className="w-5 h-5 text-[#08b48d]" />
               <div>
                 <p className="text-gray-900 dark:text-white font-medium transition-colors duration-300">Email</p>
-                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">info@zexoagency.com</p>
+                <a
+                  href="mailto:info@zexoagency.com"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300"
+                >
+                  info@zexoagency.com
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-[#08b48d]" />
               <div>
                 <p className="text-gray-900 dark:text-white font-medium transition-colors duration-300">Phone</p>
-                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">+91 6374800657</p>
+                <a
+                  href="tel:+91 63857 00657"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300"
+                >
+                  +91 63857 00657
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-[#08b48d]" />
               <div>
                 <p className="text-gray-900 dark:text-white font-medium transition-colors duration-300">Location</p>
-                <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">2nd Floor, GM Narayana Reddy Layout, Konappana Agrahara, Electronic City, Bangalore-100</p>
+                <a
+                  href="https://share.google/hxkmQUoVFZ5jMiQfP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300"
+                >
+                  2nd Floor, GM Narayana Reddy Layout, Konappana Agrahara, Electronic City, Bangalore-560100
+                </a>
               </div>
             </div>
           </div>
@@ -120,14 +131,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0 transition-colors duration-300">
               © 2025 ZEXOAgency. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <Link href="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300 text-sm">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-600 dark:text-gray-400 hover:text-[#08b48d] transition-colors duration-300 text-sm">
-                Terms of Service
-              </Link>
-            </div>
+          
           </div>
         </div>
       </div>

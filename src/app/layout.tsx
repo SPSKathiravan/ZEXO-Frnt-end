@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+    <link rel="icon" href="/favicon.ico" />
+  </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300 bg-white dark:bg-slate-900 text-gray-900 dark:text-white`}
       >
