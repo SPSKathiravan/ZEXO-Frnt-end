@@ -146,7 +146,7 @@ export default function Careers() {
                 {/* Hero Section */}
                 <section className="relative px-4 sm:px-6 lg:px-8 py-20 lg:py-32 overflow-hidden">
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <div className="absolute -top-1/2 -right-1/2 w-[1000px] h-[1000px] bg-teal-500/10 rounded-full blur-3xl opacity-30 animate-pulse" />
+                        <div className="absolute -top-1/2 -right-1/2 w-[1000px] h-[1000px] bg-[#01D0A6]/10 rounded-full blur-3xl opacity-30 animate-pulse" />
                         <div className="absolute -bottom-1/2 -left-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-3xl opacity-30" />
                     </div>
 
@@ -157,7 +157,7 @@ export default function Careers() {
                             transition={{ duration: 0.8 }}
                         >
                             <h1 className="text-4xl md:text-6xl font-black tracking-tight text-gray-900 dark:text-white mb-6">
-                                Join the <span className="text-teal-500">Revolution</span>
+                                Join the <span className="text-[#01D0A6]">Revolution</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
                                 We're building the future of digital experiences. Join a team of passionate creators,
@@ -183,7 +183,7 @@ export default function Careers() {
                                     whileHover={{ y: -5 }}
                                     className="bg-white dark:bg-white/5 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-white/10"
                                 >
-                                    <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center text-teal-500 mb-6">
+                                    <div className="w-12 h-12 bg-[#01D0A6]/10 rounded-xl flex items-center justify-center text-[#01D0A6] mb-6">
                                         {benefit.icon}
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -218,16 +218,16 @@ export default function Careers() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="group relative bg-white dark:bg-white/5 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-white/10 hover:border-teal-500/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-teal-500/10"
+                                    className="group relative bg-white dark:bg-white/5 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-white/10 hover:border-[#01D0A6]/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-[#01D0A6]/10"
                                 >
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                                         <div>
                                             <div className="flex items-center gap-3 mb-1">
-                                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-teal-500 transition-colors">
+                                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#01D0A6] transition-colors">
                                                     {job.title}
                                                 </h3>
                                                 {job.status === 'hired' && (
-                                                    <span className="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider bg-teal-500/10 text-teal-500 border border-teal-500/20 rounded-md">
+                                                    <span className="px-2 py-0.5 text-[10px] uppercase font-bold tracking-wider bg-[#01D0A6]/10 text-[#01D0A6] border border-[#01D0A6]/20 rounded-md">
                                                         Selected
                                                     </span>
                                                 )}
@@ -260,7 +260,7 @@ export default function Careers() {
                                             ) : (
                                                 <button
                                                     onClick={() => handleApplyClick(job)}
-                                                    className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-teal-500 hover:bg-teal-600 text-white font-semibold transition-all duration-300 shadow-lg shadow-teal-500/30 group-hover:scale-105"
+                                                    className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#01D0A6] hover:bg-[#01D0A6]/90 text-white font-semibold transition-all duration-300 shadow-lg shadow-[#01D0A6]/30 group-hover:scale-105"
                                                 >
                                                     Apply Now
                                                 </button>
@@ -274,7 +274,7 @@ export default function Careers() {
                         <div className="mt-12 text-center">
                             <p className="text-gray-500 dark:text-gray-400">
                                 Don't see a perfect fit? {' '}
-                                <Link href="/contact" className="text-teal-500 font-medium hover:underline">
+                                <Link href="/contact" className="text-[#01D0A6] font-medium hover:underline">
                                     Send us your resume
                                 </Link>
                                 {' '} - we're always looking for talent.
